@@ -235,3 +235,8 @@ C:\Users\jc\OneDrive\Desktop\Backend\Ecommerce\obj\Debug\net10.0\compressed\2t86
 C:\Users\jc\OneDrive\Desktop\Backend\Ecommerce\obj\Debug\net10.0\compressed\zeqtfpxban-{0}-r6hcvku5ly-r6hcvku5ly.gz
 C:\Users\jc\OneDrive\Desktop\Backend\Ecommerce\obj\Debug\net10.0\compressed\q65xylkq5g-{0}-050gf1li0j-050gf1li0j.gz
 C:\Users\jc\OneDrive\Desktop\Backend\Ecommerce\obj\Debug\net10.0\compressed\ik89ugres8-{0}-7950c2etpe-7950c2etpe.gz
+C:\Users\jc\OneDrive\Desktop\Backend\Ecommerce\obj\Debug\net10.0\Ecommerce.sourcelink.json
+C:\Users\jc\OneDrive\Desktop\Backend\Ecommerce\obj\Debug\net10.0\compressed\u913yc4sy9-{0}-a5zvmtp6a5-a5zvmtp6a5.gz
+C:\Users\jc\OneDrive\Desktop\Backend\Ecommerce\obj\Debug\net10.0\compressed\lv742palqm-{0}-7jo5yntxbx-7jo5yntxbx.gz
+C:\Users\jc\OneDrive\Desktop\Backend\Ecommerce\obj\Debug\net10.0\compressed\psc14lx9yz-{0}-dgq0xj0xmp-dgq0xj0xmp.gz
+C:\Users\jc\OneDrive\Desktop\Backend\Ecommerce\obj\Debug\net10.0\compressed\g60312orsz-{0}-t0v70gx5co-t0v70gx5co.gz
