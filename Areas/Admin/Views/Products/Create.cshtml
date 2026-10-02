@@ -1,4 +1,5 @@
-﻿@model Products
+﻿@using Ecommerce.ViewModels
+@model CreateProductViewModel
 <form asp-controller="Products" asp-action="Store" method="post" enctype="multipart/form-data">
 <div class="card-body">
                     <div class="form-floating mb-3">
@@ -35,7 +36,7 @@
             <select class="form-select" asp-for="CategoryId">
                 @foreach (var category in ViewBag.Categories)
                         {
-                            <option id="@category.Id">@category.Name</option>
+                            <option value="@category.Id">@category.Name</option>
                         }
                     </select>
                     <label class="form-label" asp-for="CategoryId"></label>

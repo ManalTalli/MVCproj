@@ -1,5 +1,7 @@
 ﻿using Ecommerce.Data;
 using Ecommerce.Models;
+using Ecommerce.ViewModels;
+using Mapster;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Ecommerce.Areas.Admin.Controllers
@@ -15,16 +17,32 @@ namespace Ecommerce.Areas.Admin.Controllers
         }
         public IActionResult Create()
         {
-            ViewBag.Categories=context.Categories.ToList();
-            return View(new Products());
+            ViewBag.Categories = context.Categories.ToList();
+            return View(new CreateProductViewModel());
         }
-        public IActionResult Store(Products products)
+        public IActionResult Store(CreateProductViewModel request)
         {
             if (!ModelState.IsValid)
             {
-                return View("Create", products);
+                ViewBag.Categories = context.Categories.ToList();
+                return View("Create", request);
             }
-            context.Products.Add(products);
+            var product = request.Adapt<Products>();
+            var extension = Path.GetExtension(request.MainImage.FileName);
+            var fileName = Guid.NewGuid().ToString()+extension;
+
+            var folderPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot","images","products");
+           if (!Directory.Exists(folderPath))
+            {
+                Directory.CreateDirectory(folderPath);
+            }
+           var filePath = Path.Combine(folderPath, fileName);
+            using (var stream = System.IO.File.Create(filePath))
+            {
+                request.MainImage.CopyTo(stream);
+            }
+            product.MainImage = fileName;
+            context.Products.Add(product);
             context.SaveChanges();
 
             return RedirectToAction("Index");
