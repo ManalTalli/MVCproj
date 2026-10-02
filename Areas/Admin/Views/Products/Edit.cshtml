@@ -1,0 +1,16 @@
+﻿@model Products
+<form asp-controller="Products" asp-action="Update" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="card-body">
+        <div class="form-floating mb-3">
+            <input asp-for="Name" class="form-control" placeholder="Product name">
+            <label asp-for="Name">Name</label>
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <label asp-for="Status" class="form-label">Select</label>
+        <select asp-for="Status" class="form-select">
+            <option value="Active">Active</option>
+            <option value="InActive">InActive</option>
+        </select>
+        <button type="submit" class="btn btn-primary mb-2">Update</button>
+    </form>

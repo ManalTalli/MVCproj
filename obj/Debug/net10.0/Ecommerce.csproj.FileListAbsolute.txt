@@ -240,3 +240,5 @@ C:\Users\jc\OneDrive\Desktop\Backend\Ecommerce\obj\Debug\net10.0\compressed\u913
 C:\Users\jc\OneDrive\Desktop\Backend\Ecommerce\obj\Debug\net10.0\compressed\lv742palqm-{0}-7jo5yntxbx-7jo5yntxbx.gz
 C:\Users\jc\OneDrive\Desktop\Backend\Ecommerce\obj\Debug\net10.0\compressed\psc14lx9yz-{0}-dgq0xj0xmp-dgq0xj0xmp.gz
 C:\Users\jc\OneDrive\Desktop\Backend\Ecommerce\obj\Debug\net10.0\compressed\g60312orsz-{0}-t0v70gx5co-t0v70gx5co.gz
+C:\Users\jc\OneDrive\Desktop\Backend\Ecommerce\bin\Debug\net10.0\Mapster.dll
+C:\Users\jc\OneDrive\Desktop\Backend\Ecommerce\bin\Debug\net10.0\Mapster.Core.dll

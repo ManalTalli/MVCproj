@@ -1,0 +1,43 @@
+﻿@model List<Products>
+@if (!Model.Any())
+{
+    <div class="alert alert-danger" role="alert">
+        No Category Found
+    </div>
+}
+else
+{
+<table class="table table-bordered" role="table">
+    <thead>
+        <tr>
+            <th style="width: 10px" scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Status</th>
+                <th scope="col">Actions</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in @Model)
+        {
+            <tr>
+                 <td>@item.Id</td>
+                 <td>@item.Name</td>
+                <td>
+                        @if(item.Status == Ecommerce.Enums.Status.Active)
+                        {
+                            <span class="badge rounded-pill text-bg-success">@item.Status</span>
+                        }else{
+                            <span class="badge rounded-pill text-bg-danger">@item.Status</span>
+                        }
+                </td>
+                    <td>
+                        <a asp-controller="Products" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-outline-danger mb-2">Delete</a>
+                        <a asp-controller="Products" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-outline-secondary mb-2">Edit</a>
+                    </td>
+                    
+            </tr>
+        }
+    </tbody>
+    </table>
+}

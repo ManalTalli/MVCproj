@@ -1,0 +1,14 @@
+﻿@using Ecommerce.ViewModels
+@model CreateCategoryViewModels
+<form asp-controller="Categories" asp-action="Store" method="post">
+<div class="card-body">
+                    <div class="form-floating mb-3">
+                      <input asp-for="Name" class="form-control"  placeholder="Category name">
+                      <label asp-for="Name">Name</label>
+                      <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+        <label asp-for="Status" class="form-label">Select</label>
+        <select asp-for="Status" class="form-select" asp-items="Html.GetEnumSelectList<Ecommerce.Enums.Status>()">
+        </select>
+        <button type="submit" class="btn btn-primary mb-2">Create</button>
+                  </form>

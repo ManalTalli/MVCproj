@@ -1,0 +1,46 @@
+﻿@model Products
+<form asp-controller="Products" asp-action="Store" method="post" enctype="multipart/form-data">
+<div class="card-body">
+                    <div class="form-floating mb-3">
+                      <input asp-for="Name" class="form-control"  placeholder="Category name">
+                      <label asp-for="Name">Name</label>
+                      <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                      <textarea asp-for="Description" class="form-control"  placeholder="Leave a comment here" style="height: 6rem"></textarea>
+            <label asp-for="Description">Description</label>
+                      
+                    </div>
+
+        <div class="form-floating mb-3">
+            <input asp-for="Price" class="form-control" placeholder="Price">
+            <label asp-for="Price"></label>
+            <span asp-validation-for="Price" class="text-danger"></span>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input asp-for="Quantity" class="form-control" placeholder="Quantity">
+            <label asp-for="Quantity"></label>
+            <span asp-validation-for="Quantity" class="text-danger"></span>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input asp-for="MainImage" type="file" class="form-control" placeholder="Quantity" accept="image/*">
+            <label asp-for="MainImage"></label>
+            <span asp-validation-for="MainImage" class="text-danger"></span>
+        </div>
+
+        <div class="form-floating mb-3">
+            <select class="form-select" asp-for="CategoryId">
+                @foreach (var category in ViewBag.Categories)
+                        {
+                            <option id="@category.Id">@category.Name</option>
+                        }
+                    </select>
+                    <label class="form-label" asp-for="CategoryId"></label>
+        </div>
+        
+        <button type="submit" class="btn btn-primary mb-2">Create</button>
+        </div>
+                  </form>
